@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  iVictory
-//
-//  Created by Jedi on 07.07.2024.
-//
 
 import SwiftUI
 
