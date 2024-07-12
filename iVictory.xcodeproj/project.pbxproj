@@ -23,6 +23,12 @@
 		81A9095F2C3AED8E0053BFC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9095E2C3AED8E0053BFC8 /* ContentView.swift */; };
 		81A909612C3AEDB70053BFC8 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909602C3AEDB70053BFC8 /* AuthView.swift */; };
 		81A909632C3AEE400053BFC8 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909622C3AEE400053BFC8 /* MainMenuView.swift */; };
+		81A909662C40F3B90053BFC8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909652C40F3B90053BFC8 /* Question.swift */; };
+		81A909682C40F3C20053BFC8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909672C40F3C20053BFC8 /* Game.swift */; };
+		81A9096A2C40F4890053BFC8 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909692C40F4890053BFC8 /* GameView.swift */; };
+		81A9096D2C40F4CB0053BFC8 /* CapsuledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9096C2C40F4CB0053BFC8 /* CapsuledButton.swift */; };
+		81A9096F2C40F5A40053BFC8 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9096E2C40F5A40053BFC8 /* GameViewModel.swift */; };
+		81A909712C40F5D50053BFC8 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909702C40F5D50053BFC8 /* FirestoreService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,12 @@
 		81A9095E2C3AED8E0053BFC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81A909602C3AEDB70053BFC8 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		81A909622C3AEE400053BFC8 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		81A909652C40F3B90053BFC8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		81A909672C40F3C20053BFC8 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		81A909692C40F4890053BFC8 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		81A9096C2C40F4CB0053BFC8 /* CapsuledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuledButton.swift; sourceTree = "<group>"; };
+		81A9096E2C40F5A40053BFC8 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		81A909702C40F5D50053BFC8 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				81A9092B2C3AE40C0053BFC8 /* iVictoryApp.swift */,
-				81A909442C3AE8160053BFC8 /* Player.swift */,
+				81A909642C40F3A30053BFC8 /* Model */,
 				81A909462C3AE88E0053BFC8 /* View */,
 				81A909522C3AE90E0053BFC8 /* ViewModel */,
 				81A909572C3AE92F0053BFC8 /* Services */,
@@ -101,6 +113,8 @@
 				81A9095E2C3AED8E0053BFC8 /* ContentView.swift */,
 				81A909602C3AEDB70053BFC8 /* AuthView.swift */,
 				81A909622C3AEE400053BFC8 /* MainMenuView.swift */,
+				81A909692C40F4890053BFC8 /* GameView.swift */,
+				81A9096B2C40F4B00053BFC8 /* Modifiers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,9 +122,10 @@
 		81A909522C3AE90E0053BFC8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				81A9094F2C3AE90E0053BFC8 /* AuthViewModel.swift */,
 				81A909502C3AE90E0053BFC8 /* ContentViewModel.swift */,
+				81A9094F2C3AE90E0053BFC8 /* AuthViewModel.swift */,
 				81A909512C3AE90E0053BFC8 /* MainMenuViewModel.swift */,
+				81A9096E2C40F5A40053BFC8 /* GameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -119,8 +134,27 @@
 			isa = PBXGroup;
 			children = (
 				81A909562C3AE92F0053BFC8 /* AuthService.swift */,
+				81A909702C40F5D50053BFC8 /* FirestoreService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		81A909642C40F3A30053BFC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81A909442C3AE8160053BFC8 /* Player.swift */,
+				81A909652C40F3B90053BFC8 /* Question.swift */,
+				81A909672C40F3C20053BFC8 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81A9096B2C40F4B00053BFC8 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				81A9096C2C40F4CB0053BFC8 /* CapsuledButton.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,14 +237,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A9096D2C40F4CB0053BFC8 /* CapsuledButton.swift in Sources */,
+				81A909712C40F5D50053BFC8 /* FirestoreService.swift in Sources */,
 				81A909552C3AE90E0053BFC8 /* MainMenuViewModel.swift in Sources */,
 				81A909582C3AE92F0053BFC8 /* AuthService.swift in Sources */,
 				81A909532C3AE90E0053BFC8 /* AuthViewModel.swift in Sources */,
 				81A909632C3AEE400053BFC8 /* MainMenuView.swift in Sources */,
 				81A9095F2C3AED8E0053BFC8 /* ContentView.swift in Sources */,
+				81A9096F2C40F5A40053BFC8 /* GameViewModel.swift in Sources */,
+				81A909662C40F3B90053BFC8 /* Question.swift in Sources */,
+				81A909682C40F3C20053BFC8 /* Game.swift in Sources */,
 				81A909542C3AE90E0053BFC8 /* ContentViewModel.swift in Sources */,
 				81A909452C3AE8160053BFC8 /* Player.swift in Sources */,
 				81A9092C2C3AE40C0053BFC8 /* iVictoryApp.swift in Sources */,
+				81A9096A2C40F4890053BFC8 /* GameView.swift in Sources */,
 				81A909612C3AEDB70053BFC8 /* AuthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

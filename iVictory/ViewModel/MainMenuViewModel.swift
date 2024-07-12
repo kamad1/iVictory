@@ -1,17 +1,23 @@
 
 import Foundation
 
-class MainMenuViewModel: ObservableObject {
-    let currentUserID: String
+final class MainMenuViewModel: ObservableObject {
+    let currentUserId: String
     @Published var authorized = true
+    var player: Player?
     
-    init(userId: String) {
-        self.currentUserID = userId
+    init(id: String) {
+        self.currentUserId = id
         getData()
     }
     
     func getData() {
-        
+        Task {
+            let player = try await FirestoreService.shared.getPlayer(byId: currentUserId)
+            DispatchQueue.main.async {
+                self.player = player
+            }
+        }
     }
     
     func quit() {

@@ -36,18 +36,16 @@ struct AuthView: View {
                 }
                 Button(isAuth ? "Войти" : "Создать аккаунт") {
                     switch isAuth {
-                    case true: viewModel.authorization(login: email, password: password)
-                    case false: viewModel.createAccount(login: email, password: password, confirm: confirm)
+                    case true: viewModel.authorization(login: email,
+                                                       password: password)
+                    case false: viewModel.createAccount(login: email,
+                                                        password: password,
+                                                        confirm: confirm)
                     }
                 }
-                    .bold()
-                    .padding(.vertical, 12)
-                    .frame(maxWidth: .infinity)
-                    .background(.purple)
-                    .clipShape(.capsule)
-                    .shadow(color: .white, radius: 10)
+                .modifier(CapsuledButton(color: .purple))
                 
-                Button(isAuth ? "Уже есть аккаунт?" : "Ещё не с нами?") {
+                Button(isAuth ? "Ещё не с нами?" : "Уже есть аккаунт?") {
                     isAuth.toggle()
                 }
             }

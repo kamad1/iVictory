@@ -8,10 +8,12 @@ struct ContentView: View {
         case .unauthorized:
             AuthView()
                 .environmentObject(viewModel)
-        case .authorized(let id):
-            let viewModel = MainMenuViewModel(userId: id)
-            MainMenuView(viewModel: viewModel)
-                .environmentObject(self.viewModel)
+        case .authorized(let player):
+            let viewModel = MainMenuViewModel(id: player)
+            NavigationView {
+                MainMenuView(viewModel: viewModel)
+                    .environmentObject(self.viewModel)
+            }
         }
     }
 }

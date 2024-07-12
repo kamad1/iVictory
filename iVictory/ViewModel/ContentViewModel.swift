@@ -1,7 +1,7 @@
 
 import Foundation
 
-class ContentViewModel: ObservableObject {
+final class ContentViewModel: ObservableObject {
     @Published var appState: AppState
     
     init() {

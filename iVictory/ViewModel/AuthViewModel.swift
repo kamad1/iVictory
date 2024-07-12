@@ -1,7 +1,7 @@
 
 import Foundation
 
-class AuthViewModel: ObservableObject {
+final class AuthViewModel: ObservableObject {
     @Published var userId: String? = nil
     
     func createAccount(login: String,
@@ -23,12 +23,11 @@ class AuthViewModel: ObservableObject {
     func authorization(login: String,
                        password: String) {
         Task {
-            let user = try await AuthService.shared.signIn(email: login,
+            let player = try await AuthService.shared.signIn(email: login,
                                                     password: password)
             DispatchQueue.main.async {
-                self.userId = user.uid
+                self.userId = player.id
             }
         }
     }
-    
 }

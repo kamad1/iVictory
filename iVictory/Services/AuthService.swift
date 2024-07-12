@@ -1,7 +1,7 @@
 
 import FirebaseAuth
 
-class AuthService {
+final class AuthService {
     static let shared = AuthService(); private init() { }
     private let auth = Auth.auth()
     var currentUser: User? { auth.currentUser }
@@ -10,14 +10,17 @@ class AuthService {
                 password: String) async throws -> User {
         let result = try await auth.createUser(withEmail: email,
                                                password: password)
+        try await FirestoreService.shared.createPlayer(id: result.user.uid,
+                                             email: result.user.email!)
         return result.user
     }
     
     func signIn(email: String,
-                password: String) async throws -> User {
+                password: String) async throws -> Player {
         let result = try await auth.signIn(withEmail: email,
                                                password: password)
-        return result.user
+        let player = try await FirestoreService.shared.getPlayer(byId: result.user.uid)
+        return player
     }
     
     func sighOut() throws -> Bool {
@@ -25,6 +28,3 @@ class AuthService {
         return true
     }
 }
-
-
-
