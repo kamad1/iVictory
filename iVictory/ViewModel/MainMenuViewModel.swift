@@ -4,7 +4,7 @@ import Foundation
 final class MainMenuViewModel: ObservableObject {
     let currentUserId: String
     @Published var authorized = true
-    var player: Player?
+    @Published var player: Player?
     
     init(id: String) {
         self.currentUserId = id

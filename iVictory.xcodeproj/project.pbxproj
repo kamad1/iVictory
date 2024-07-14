@@ -29,6 +29,15 @@
 		81A9096D2C40F4CB0053BFC8 /* CapsuledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9096C2C40F4CB0053BFC8 /* CapsuledButton.swift */; };
 		81A9096F2C40F5A40053BFC8 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9096E2C40F5A40053BFC8 /* GameViewModel.swift */; };
 		81A909712C40F5D50053BFC8 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909702C40F5D50053BFC8 /* FirestoreService.swift */; };
+		81A909732C43D4950053BFC8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909722C43D4950053BFC8 /* SettingsView.swift */; };
+		81A909762C43D4E30053BFC8 /* StatisticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909752C43D4E30053BFC8 /* StatisticCell.swift */; };
+		81A909792C43D5900053BFC8 /* StatisticCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909782C43D5900053BFC8 /* StatisticCellViewModel.swift */; };
+		81A9097B2C43D5AA0053BFC8 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9097A2C43D5AA0053BFC8 /* SettingsViewModel.swift */; };
+		81A9097D2C43D6100053BFC8 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9097C2C43D6100053BFC8 /* DateHelper.swift */; };
+		81A909812C43DAA80053BFC8 /* TopPlayersStatisticViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909802C43DAA80053BFC8 /* TopPlayersStatisticViewModel.swift */; };
+		81A909832C43DAE30053BFC8 /* TopPlayersStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909822C43DAE30053BFC8 /* TopPlayersStatisticView.swift */; };
+		81A909852C43DE6F0053BFC8 /* TopPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909842C43DE6F0053BFC8 /* TopPlayerCell.swift */; };
+		81A909872C43DE920053BFC8 /* TopPlayerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909862C43DE920053BFC8 /* TopPlayerCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +60,15 @@
 		81A9096C2C40F4CB0053BFC8 /* CapsuledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuledButton.swift; sourceTree = "<group>"; };
 		81A9096E2C40F5A40053BFC8 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		81A909702C40F5D50053BFC8 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		81A909722C43D4950053BFC8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		81A909752C43D4E30053BFC8 /* StatisticCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticCell.swift; sourceTree = "<group>"; };
+		81A909782C43D5900053BFC8 /* StatisticCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticCellViewModel.swift; sourceTree = "<group>"; };
+		81A9097A2C43D5AA0053BFC8 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		81A9097C2C43D6100053BFC8 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		81A909802C43DAA80053BFC8 /* TopPlayersStatisticViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPlayersStatisticViewModel.swift; sourceTree = "<group>"; };
+		81A909822C43DAE30053BFC8 /* TopPlayersStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPlayersStatisticView.swift; sourceTree = "<group>"; };
+		81A909842C43DE6F0053BFC8 /* TopPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPlayerCell.swift; sourceTree = "<group>"; };
+		81A909862C43DE920053BFC8 /* TopPlayerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPlayerCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +132,9 @@
 				81A909602C3AEDB70053BFC8 /* AuthView.swift */,
 				81A909622C3AEE400053BFC8 /* MainMenuView.swift */,
 				81A909692C40F4890053BFC8 /* GameView.swift */,
+				81A909722C43D4950053BFC8 /* SettingsView.swift */,
+				81A909822C43DAE30053BFC8 /* TopPlayersStatisticView.swift */,
+				81A909742C43D4BA0053BFC8 /* Components */,
 				81A9096B2C40F4B00053BFC8 /* Modifiers */,
 			);
 			path = View;
@@ -126,6 +147,9 @@
 				81A9094F2C3AE90E0053BFC8 /* AuthViewModel.swift */,
 				81A909512C3AE90E0053BFC8 /* MainMenuViewModel.swift */,
 				81A9096E2C40F5A40053BFC8 /* GameViewModel.swift */,
+				81A9097A2C43D5AA0053BFC8 /* SettingsViewModel.swift */,
+				81A909802C43DAA80053BFC8 /* TopPlayersStatisticViewModel.swift */,
+				81A909772C43D57A0053BFC8 /* Components */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -135,6 +159,7 @@
 			children = (
 				81A909562C3AE92F0053BFC8 /* AuthService.swift */,
 				81A909702C40F5D50053BFC8 /* FirestoreService.swift */,
+				81A9097C2C43D6100053BFC8 /* DateHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -155,6 +180,24 @@
 				81A9096C2C40F4CB0053BFC8 /* CapsuledButton.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		81A909742C43D4BA0053BFC8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				81A909752C43D4E30053BFC8 /* StatisticCell.swift */,
+				81A909842C43DE6F0053BFC8 /* TopPlayerCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		81A909772C43D57A0053BFC8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				81A909782C43D5900053BFC8 /* StatisticCellViewModel.swift */,
+				81A909862C43DE920053BFC8 /* TopPlayerCellViewModel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,17 +281,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A9096D2C40F4CB0053BFC8 /* CapsuledButton.swift in Sources */,
+				81A909852C43DE6F0053BFC8 /* TopPlayerCell.swift in Sources */,
 				81A909712C40F5D50053BFC8 /* FirestoreService.swift in Sources */,
 				81A909552C3AE90E0053BFC8 /* MainMenuViewModel.swift in Sources */,
 				81A909582C3AE92F0053BFC8 /* AuthService.swift in Sources */,
 				81A909532C3AE90E0053BFC8 /* AuthViewModel.swift in Sources */,
+				81A9097D2C43D6100053BFC8 /* DateHelper.swift in Sources */,
+				81A9097B2C43D5AA0053BFC8 /* SettingsViewModel.swift in Sources */,
 				81A909632C3AEE400053BFC8 /* MainMenuView.swift in Sources */,
 				81A9095F2C3AED8E0053BFC8 /* ContentView.swift in Sources */,
+				81A909792C43D5900053BFC8 /* StatisticCellViewModel.swift in Sources */,
+				81A909872C43DE920053BFC8 /* TopPlayerCellViewModel.swift in Sources */,
 				81A9096F2C40F5A40053BFC8 /* GameViewModel.swift in Sources */,
 				81A909662C40F3B90053BFC8 /* Question.swift in Sources */,
+				81A909732C43D4950053BFC8 /* SettingsView.swift in Sources */,
 				81A909682C40F3C20053BFC8 /* Game.swift in Sources */,
 				81A909542C3AE90E0053BFC8 /* ContentViewModel.swift in Sources */,
+				81A909812C43DAA80053BFC8 /* TopPlayersStatisticViewModel.swift in Sources */,
+				81A909762C43D4E30053BFC8 /* StatisticCell.swift in Sources */,
 				81A909452C3AE8160053BFC8 /* Player.swift in Sources */,
+				81A909832C43DAE30053BFC8 /* TopPlayersStatisticView.swift in Sources */,
 				81A9092C2C3AE40C0053BFC8 /* iVictoryApp.swift in Sources */,
 				81A9096A2C40F4890053BFC8 /* GameView.swift in Sources */,
 				81A909612C3AEDB70053BFC8 /* AuthView.swift in Sources */,

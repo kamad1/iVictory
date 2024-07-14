@@ -12,7 +12,7 @@ struct AuthView: View {
         VStack(spacing: 36) {
             Text("iVictory")
                 .font(.title)
-              
+            
                 .padding(.vertical)
                 .padding(.horizontal, 30)
                 .background(.black.opacity(0.3))
@@ -62,7 +62,7 @@ struct AuthView: View {
             contentVM.appState = .authorized(id: newValue)
         })
         .foregroundStyle(.white)
-        .frame(maxWidth: .infinity,maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .offset(y: -70)
         .background {
             Image(.bg)

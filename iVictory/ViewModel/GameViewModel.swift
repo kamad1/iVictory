@@ -3,19 +3,21 @@ import Foundation
 
 final class GameViewModel: ObservableObject {
     @Published var player: Player
-
     @Published var questions = [Question]()
     @Published var bank = 0
     @Published var currentQuestionIndex = 0
+    @Published var status: Game.GameStatus = .inProcess
+    @Published var statusMessage = ""
     
     var currentQuestion: Question {
         guard !questions.isEmpty else {
             return .init(text: "",
-                         difficulty: .easy,
                          correctAnswer: "ааа",
                          destructors: ["ббб",
                                        "вввв",
-                                       "гггггг"])
+                                       "гггггг"],
+                         difficulty: .easy
+            )
         }
         
         return questions[currentQuestionIndex]
@@ -31,7 +33,14 @@ final class GameViewModel: ObservableObject {
     }
     
     func getData() {
-        
+        Task {
+            let questions = try await  FirestoreService.shared.getQuestionsForGame()
+            print("Questions: \(questions.count)")
+            DispatchQueue.main.async {
+                self.questions = questions
+            }
+        }
+       
     }
     
     func createGame(status: Game.GameStatus) {
@@ -43,13 +52,16 @@ final class GameViewModel: ObservableObject {
                                                             userId: player.id) }
     }
     
-    func nextQuestion() {
+    func selectAnswer() {
         //TODO: Переход к следующему вопросу с проверкой, не является ли вопрос последним
         guard !(currentQuestionNumber == 15) else {
-            self.createGame(status: .win)
+            self.status = .win
             return
         }
-        
+        bank += price
         currentQuestionIndex += 1
     }
+    
+  
 }
+

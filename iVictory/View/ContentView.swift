@@ -13,6 +13,12 @@ struct ContentView: View {
             NavigationView {
                 MainMenuView(viewModel: viewModel)
                     .environmentObject(self.viewModel)
+                // это нужно сделать только 1 раз для загрузки вопросов после 1 запуска комитим или удаляем, а метод в сервисе делаем приватным что бы к нему не обращаться более.
+                //                    .onAppear {
+                //                        Task {
+                //                            try await FirestoreService.shared.questionsParser()
+                //                        }
+                //                    }
             }
         }
     }

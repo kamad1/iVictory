@@ -13,6 +13,10 @@ class Player: Identifiable {
         self.games = games
     }
     
+//    init?(nickname: String) {
+//        self.nickname = nickname
+//    }
+    
     init?(data: [String: Any]) {
         guard let id = data["id"] as? String,
               let nickname = data["nickname"] as? String,
@@ -22,6 +26,8 @@ class Player: Identifiable {
         self.nickname = nickname
         self.email = email
     }
+    
+   
 }
 
 extension Player {
@@ -33,4 +39,5 @@ extension Player {
         return repres
     }
 }
+
 

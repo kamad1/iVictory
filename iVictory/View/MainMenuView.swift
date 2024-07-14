@@ -20,7 +20,9 @@ struct MainMenuView: View {
                 .modifier(CapsuledButton(color: .purple))
                 
                 NavigationLink("Настройки") {
-                    Text("Настройки")
+                    if let player = viewModel.player {
+                        SettingsView(viewModel: .init(player: player))
+                    }
                         
                 }
                 .modifier(CapsuledButton(color: .orange))
@@ -29,6 +31,17 @@ struct MainMenuView: View {
                     viewModel.quit()
                 }
                 .modifier(CapsuledButton(color: .red))
+                
+                NavigationLink("ТОП Игроков") {
+                    Text("ТОП Игроков")
+                    if let player = viewModel.player {
+                        TopPlayersStatisticView(viewModel: .init(player: player))
+                    }
+                    
+                    
+                }
+                .modifier(CapsuledButton(color: .green))
+
                
             }
             .onChange(of: viewModel.authorized) { oldValue, newValue in
@@ -57,3 +70,6 @@ struct MainMenuView: View {
 #Preview {
     ContentView()
 }
+
+
+

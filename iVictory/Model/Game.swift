@@ -1,6 +1,5 @@
 
 import Foundation
-
 import FirebaseFirestore
 
 class Game: Identifiable {
@@ -17,13 +16,30 @@ class Game: Identifiable {
         self.bank = bank
         self.id = id
     }
+    
+    init?(data: [String: Any]) {
+        guard let id = data["id"] as? String,
+              let bank = data["bank"] as? Int,
+              let question = data["question"] as? Int,
+              let timestamp = data["date"] as? Timestamp,
+              let statusRawValue = data["status"] as? String else { return nil }
+        
+        let date = timestamp.dateValue()
+        guard let status = Game.GameStatus(rawValue: statusRawValue) else { return nil }
+        
+        self.id = id
+        self.bank = bank
+        self.question = question
+        self.date = date
+        self.status = status
+    }
  
     enum GameStatus: String {
         case win = "Выиграл"
         case lose = "Проиграл"
         case getMoney = "Забрал деньги"
+        case inProcess = "В процессе"
     }
-    
 }
 
 extension Game {
