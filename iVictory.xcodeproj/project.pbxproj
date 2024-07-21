@@ -38,6 +38,7 @@
 		81A909832C43DAE30053BFC8 /* TopPlayersStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909822C43DAE30053BFC8 /* TopPlayersStatisticView.swift */; };
 		81A909852C43DE6F0053BFC8 /* TopPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909842C43DE6F0053BFC8 /* TopPlayerCell.swift */; };
 		81A909872C43DE920053BFC8 /* TopPlayerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909862C43DE920053BFC8 /* TopPlayerCellViewModel.swift */; };
+		81A909892C4D07440053BFC8 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A909882C4D07440053BFC8 /* StorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		81A909822C43DAE30053BFC8 /* TopPlayersStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPlayersStatisticView.swift; sourceTree = "<group>"; };
 		81A909842C43DE6F0053BFC8 /* TopPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPlayerCell.swift; sourceTree = "<group>"; };
 		81A909862C43DE920053BFC8 /* TopPlayerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPlayerCellViewModel.swift; sourceTree = "<group>"; };
+		81A909882C4D07440053BFC8 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				81A909562C3AE92F0053BFC8 /* AuthService.swift */,
 				81A909702C40F5D50053BFC8 /* FirestoreService.swift */,
 				81A9097C2C43D6100053BFC8 /* DateHelper.swift */,
+				81A909882C4D07440053BFC8 /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				81A9097B2C43D5AA0053BFC8 /* SettingsViewModel.swift in Sources */,
 				81A909632C3AEE400053BFC8 /* MainMenuView.swift in Sources */,
 				81A9095F2C3AED8E0053BFC8 /* ContentView.swift in Sources */,
+				81A909892C4D07440053BFC8 /* StorageService.swift in Sources */,
 				81A909792C43D5900053BFC8 /* StatisticCellViewModel.swift in Sources */,
 				81A909872C43DE920053BFC8 /* TopPlayerCellViewModel.swift in Sources */,
 				81A9096F2C40F5A40053BFC8 /* GameViewModel.swift in Sources */,
